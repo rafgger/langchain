@@ -4,7 +4,7 @@
 # 🚀 Langchain Notebook Setup
 
 
-This project demonstrates how to use Langchain and OpenAI to automatically break down a complex question into multiple sub-questions using a Jupyter notebook.
+This project demonstrates how to use Langchain and OpenAI to automatically break down a complex question into multiple sub-questions using a Jupyter notebook (lang.ipynb).
 
 It leverages a **Pydantic model** to enforce structured output (a list of sub-questions), and uses a **system prompt** together with an actual question (e.g., "What are the main components of an LLM-powered autonomous agent system?") to instruct the LLM to decompose the query into actionable sub-tasks.
 

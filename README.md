@@ -4,8 +4,13 @@
 # 🚀 Langchain Notebook Setup
 
 
-This project demonstrates how to use Langchain and OpenAI to automatically break down a complex question into multiple sub-questions using a Jupyter notebook (lang.ipynb).
 
+This project demonstrates how to use Langchain and OpenAI in Jupyter notebooks for two main workflows:
+
+- **lang.ipynb**: Automatically break down a complex question into multiple sub-questions using a Pydantic model and a system prompt.
+- **RAG-lang.ipynb**: Retrieval-Augmented Generation (RAG) workflow, where the LLM answers a question using relevant context retrieved from a set of documents.
+
+### lang.ipynb: Sub-question Decomposition
 It leverages a **Pydantic model** to enforce structured output (a list of sub-questions), and uses a **system prompt** together with an actual question (e.g., "What are the main components of an LLM-powered autonomous agent system?") to instruct the LLM to decompose the query into actionable sub-tasks.
 
 **What does the code do?**
@@ -18,6 +23,16 @@ The notebook (`lang.ipynb`) loads your OpenAI API key from a `.env` file and use
 - 📋 **Receive and print a list of sub-questions**, each representing a smaller part of the original query.
 
 You can modify the Pydantic model or the system prompt, and use this pattern to decompose any complex query into actionable sub-tasks using LLMs.
+
+### RAG-lang.ipynb: Retrieval-Augmented Generation
+This notebook demonstrates how to use a simple in-memory FAISS vectorstore and OpenAI to answer questions using retrieved context:
+
+- 📄 **Store example documents** in a vector database (FAISS) with OpenAI embeddings.
+- 🔍 **Retrieve relevant context** for a user question.
+- 🧠 **Format a system prompt** with the retrieved context and the user's question.
+- 🤖 **Use the OpenAI model** to generate a concise answer based on the context.
+
+You can adapt this workflow to use your own documents for more advanced RAG applications.
 
 ## 1️⃣ Create and Activate Virtual Environment
 
